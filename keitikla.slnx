@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="keitikla/keitikla.vcxproj" />
+  <Project Path="keitikla/keitikla.vcxproj" Id="6b097957-d620-4203-8441-d523193c0b76" />
 </Solution>
