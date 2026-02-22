@@ -43,19 +43,7 @@ int main() {
         cout << "Pasirinkite: ";
         cin >> valiuta;
 
-        if (pasirinkimas == 1) {
-
-            if (valiuta == 1)
-                cout << "1 EUR = " << GBP_Pirkti << " GBP (pirkimas)" << endl;
-            else if (valiuta == 2)
-                cout << "1 EUR = " << USD_Pirkti << " USD (pirkimas)" << endl;
-            else if (valiuta == 3)
-                cout << "1 EUR = " << INR_Pirkti << " INR (pirkimas)" << endl;
-            else
-                cout << "Neteisinga valiuta." << endl;
-        }
-
-        else if (pasirinkimas == 2) {
+        if (pasirinkimas == 2) {
 
             cout << "Iveskite kiek EUR norite keisti: ";
             cin >> kiekis;
@@ -66,8 +54,6 @@ int main() {
                 cout << "Gausite: " << kiekis * USD_Pirkti << " USD" << endl;
             else if (valiuta == 3)
                 cout << "Gausite: " << kiekis * INR_Pirkti << " INR" << endl;
-            else
-                cout << "Neteisinga valiuta." << endl;
         }
 
         else if (pasirinkimas == 3) {
@@ -76,17 +62,21 @@ int main() {
             cin >> kiekis;
 
             if (valiuta == 1)
-                cout << "Gausite: " << kiekis * GBP_Parduoti << " EUR" << endl;
+                cout << "Gausite: " << kiekis / GBP_Parduoti << " EUR" << endl;
             else if (valiuta == 2)
-                cout << "Gausite: " << kiekis * USD_Parduoti << " EUR" << endl;
+                cout << "Gausite: " << kiekis / USD_Parduoti << " EUR" << endl;
             else if (valiuta == 3)
-                cout << "Gausite: " << kiekis * INR_Parduoti << " EUR" << endl;
-            else
-                cout << "Neteisinga valiuta." << endl;
+                cout << "Gausite: " << kiekis / INR_Parduoti << " EUR" << endl;
         }
 
-        else {
-            cout << "Neteisingas pasirinkimas." << endl;
+        else if (pasirinkimas == 1) {
+
+            if (valiuta == 1)
+                cout << "1 EUR = " << GBP_Pirkti << " GBP" << endl;
+            else if (valiuta == 2)
+                cout << "1 EUR = " << USD_Pirkti << " USD" << endl;
+            else if (valiuta == 3)
+                cout << "1 EUR = " << INR_Pirkti << " INR" << endl;
         }
     }
 
